@@ -9,6 +9,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import BookDetails from "./components/BookDetails";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
             path="/books/:bookId"
             element={<BookDetails></BookDetails>}
           ></Route>
+
+          <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>
       </Router>
     </BooksProvider>
